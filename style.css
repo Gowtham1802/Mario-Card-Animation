@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  /* margin: 0; */
+  overflow: hidden;
+}
+
+.sky,.grass,.road,.white_line {
+  /* position: relative; */
+  width: 100%;
+}
+
+.sky{
+  height: 38%;
+  background-color: lightblue;
+  position: relative;
+  z-index: 1;
+}
+
+.grass{
+  height: 32%;
+  background-color: green;
+  /* box-shadow: 0 -10px 5px green; */
+  position: relative;
+  z-index: 1;
+}
+
+.road{
+  height: 3s0%;
+  background-color: rgb(77, 76, 76);
+  /* width: 100%; */
+  position: relative;
+}
+
+.white_lines {
+  border-top: 3rem solid white;
+  /* top: -10%;
+  width: 100%; */
+  border-style: dashed;
+  border-bottom: none;
+  position: relative;
+  bottom: -1rem;
+}
+
+img{
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.mario {
+  width: 5rem;
+  position: absolute;
+  bottom: 6.5rem;
+  left: 0rem;
+  z-index: 2;
+  animation-name: mario;
+  animation-duration: 3.2s;
+  animation-iteration-count: infinite;
+}
+
+.luigi {
+  width: 5rem;
+  position: relative;
+  bottom: 15rem;
+  left: 0rem;
+  z-index: 2;
+  animation-name: luigi;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.cloud1{
+  position: relative;
+    top: 1.5rem;
+    left: -8rem;
+    z-index: -1;
+    animation-name: cloud1-slidein;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.cloud2{
+  position: relative;
+  top: -8rem;
+  left: -8rem;
+  z-index: -1;
+  opacity: 0.5;
+  animation-name: cloud2-slidein;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cloud1-slidein {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 110%;
+  }
+}
+
+@keyframes cloud2-slidein {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 110%;
+  }
+}
+
+@keyframes mario {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
+
+@keyframes luigi {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: 100%;
+  }
+}
